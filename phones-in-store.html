@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones In Store | Mobile and Laptop Repairs</title>
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Mobile and Laptop Repairs</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Repairs <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="screen-repair.html">Screen Repair</a></li>
+                        <li><a href="battery-replacement.html">Battery Replacement</a></li>
+                        <li><a href="water-damage.html">Water Damage</a></li>
+                        <li><a href="charging-port.html">Charging Port Repair</a></li>
+                        <li><a href="phone-unlocking.html">Phone Unlocking</a></li>
+                        <li><a href="laptop-tablet.html">Laptop & Tablet Repair</a></li>
+                    </ul>
+                </li>
+                <li><a href="vapes-pouches.html">Vapes & Pouches</a></li>
+                <li><a href="phones-in-store.html">Phones</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Phones In Store</h1>
+            <p>Quality second-hand handsets — tested, cleaned and ready to use.</p>
+        </div>
+    </section>
+
+    <section class="phones-section">
+        <div class="container">
+            <div class="phones-intro reveal">
+                <div class="text-content">
+                    <h2>Buy with Confidence</h2>
+                    <p>All our pre-owned devices undergo a rigorous 40-point inspection and come with a standard warranty. Why buy new when you can get the latest tech for less?</p>
+                </div>
+                <div class="image-content">
+                    <img src="technician.jpg.jpg" alt="Phone Display" class="rounded shadow">
+                </div>
+            </div>
+            
+            <p class="phones-intro-text text-center reveal" style="margin-top: 4rem; max-width:800px; margin-left:auto; margin-right:auto; font-size:1.1rem; color:var(--text-muted);">
+                We carry a rotating selection of second-hand smartphones from the world's top brands.
+                Every handset is tested before it goes on display. Stock changes regularly —
+                call ahead or come in to see what we have available today.
+            </p>
+
+            <div class="phones-grid reveal" style="margin-top: 4rem;">
+                <div class="phone-card">
+                    <img src="Iphone 17.webp" alt="iPhone 17">
+                    <h3>iPhone 17</h3>
+                    <span class="badge">Available In Store</span>
+                </div>
+                <div class="phone-card">
+                    <img src="Iphone 17 pro max.webp" alt="iPhone 17 Pro Max">
+                    <h3>iPhone 17 Pro Max</h3>
+                    <span class="badge">Available In Store</span>
+                </div>
+                <div class="phone-card">
+                    <img src="Samsung s26 ultra.webp" alt="Samsung S26 Ultra">
+                    <h3>Samsung S26 Ultra</h3>
+                    <span class="badge">Available In Store</span>
+                </div>
+                <div class="phone-card">
+                    <img src="Samsung Flip 6.webp" alt="Samsung Galaxy Z Flip 6">
+                    <h3>Samsung Galaxy Z Flip 6</h3>
+                    <span class="badge">Available In Store</span>
+                </div>
+                <div class="phone-card">
+                    <img src="Google Pixel 10a.webp" alt="Google Pixel 10a">
+                    <h3>Google Pixel 10a</h3>
+                    <span class="badge">Available In Store</span>
+                </div>
+            </div>
+            
+            <div class="phones-cta text-center reveal" style="margin-top: 5rem;">
+                <h2>See Something You Like?</h2>
+                <p>Call us to check availability or come in and speak to the team.</p>
+                <a href="tel:07448885755" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fa-solid fa-phone"></i> Call 07448 885755</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Mobile and Laptop Repairs</h3>
+                <p>Premium tech repair services in West Kensington. We fix screens, batteries, and more with clinical precision.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="phones-in-store.html">Used Phones</a></li>
+                    <li><a href="vapes-pouches.html">Vapes & Pouches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 175b North End Rd, London W14 9NL</p>
+                <p><i class="fa-solid fa-phone"></i> 07448 885755</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mobile and Laptop Repairs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+<script>
+    // Mobile Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Repairs dropdown click/touch toggle for easy navigation
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdown && dropdownMenu) {
+        dropdown.addEventListener('click', (e) => {
+            if (e.target.closest('a') && e.target.closest('a').getAttribute('href') === '#') {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            }
+        });
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
+
+    // Reveal on scroll
+    window.addEventListener('scroll', () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(reveal => {
+            const windowHeight = window.innerHeight;
+            const revealTop = reveal.getBoundingClientRect().top;
+            const revealPoint = 150;
+            if (revealTop < windowHeight - revealPoint) {
+                reveal.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
