@@ -298,17 +298,21 @@
     }
 
     // Reveal on scroll
-    window.addEventListener('scroll', () => {
+    const checkReveals = () => {
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach(reveal => {
             const windowHeight = window.innerHeight;
             const revealTop = reveal.getBoundingClientRect().top;
-            const revealPoint = 150;
+            const revealPoint = 80;
             if (revealTop < windowHeight - revealPoint) {
                 reveal.classList.add('active');
             }
         });
-    });
+    };
+    window.addEventListener('scroll', checkReveals);
+    window.addEventListener('DOMContentLoaded', checkReveals);
+    window.addEventListener('load', checkReveals);
+    setTimeout(checkReveals, 100);
 </script>
 
 </body>

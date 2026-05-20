@@ -37,7 +37,7 @@
 
     
     <!-- SECTION 1 — SERVICE HERO (Clean white translucent overlay to display natural colors clearly) -->
-    <header class="service-hero" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Phone sim not supported image 1 unlock.png');">
+    <header class="service-hero" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('Phone sim not supported image 1 unlock.png');">
         <div class="container service-hero-content reveal">
             <h1 class="service-hero-title">Phone Unlocking</h1>
             <p class="service-hero-subtitle">Free your phone from any network — use any SIM, anywhere in the world.</p>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="details-right reveal" style="transition-delay: 0.2s">
-                <img src="Phone being unblocked.jpg" alt="Technician working" class="details-img rounded shadow">
+                <img src="Use the provider you want image 3.jpg" alt="Repaired device" class="details-img rounded shadow">
             </div>
         </div>
     </section>
@@ -192,17 +192,21 @@
     }
 
     // Reveal on scroll
-    window.addEventListener('scroll', () => {
+    const checkReveals = () => {
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach(reveal => {
             const windowHeight = window.innerHeight;
             const revealTop = reveal.getBoundingClientRect().top;
-            const revealPoint = 150;
+            const revealPoint = 80;
             if (revealTop < windowHeight - revealPoint) {
                 reveal.classList.add('active');
             }
         });
-    });
+    };
+    window.addEventListener('scroll', checkReveals);
+    window.addEventListener('DOMContentLoaded', checkReveals);
+    window.addEventListener('load', checkReveals);
+    setTimeout(checkReveals, 100);
 </script>
 
 </body>

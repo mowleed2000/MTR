@@ -333,7 +333,8 @@ h1, h2, h3, h4, .logo {
 .ba-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--bg-alternate);
     display: block;
 }
 
@@ -823,7 +824,7 @@ h1, h2, h3, h4, .logo {
 }
 
 /* Phones Page Styles */
-.phones-section { padding: 120px 0; }
+.phones-section { padding: 120px 0; text-align: center; }
 .phones-intro {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -834,6 +835,12 @@ h1, h2, h3, h4, .logo {
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.phones-intro .text-content {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .phones-intro .text-content h2 {
@@ -846,6 +853,7 @@ h1, h2, h3, h4, .logo {
     color: var(--text-muted);
     font-size: 1.15rem;
     line-height: 1.7;
+    font-style: normal !important;
 }
 
 .phones-grid {
@@ -992,6 +1000,17 @@ h1, h2, h3, h4, .logo {
     .teaser-grid.reverse .teaser-images {
         order: 2;
     }
+    .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .about-content {
+        order: 1 !important;
+    }
+    .about-images {
+        order: 2 !important;
+        margin-top: 30px !important;
+    }
     .about-images, .teaser-images { justify-content: center; }
     .hero-text p { margin: 0 auto 35px; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1013,13 +1032,28 @@ h1, h2, h3, h4, .logo {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        width: 100% !important;
+        box-sizing: border-box;
         background: var(--bg-card);
         padding: 30px;
         text-align: center;
         border-bottom: 1px solid var(--border-color);
+        z-index: 1001;
     }
     .nav-links.active { display: flex; }
+    .nav-links .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background: rgba(0,0,0,0.02);
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    .nav-links .dropdown-menu li a {
+        text-align: center;
+        padding: 10px 0;
+    }
     .hamburger { display: block; }
     .footer-grid { grid-template-columns: 1fr; }
     .gallery-grid-3, .gallery-grid-4, .phones-grid, .pouches-grid {
@@ -1027,5 +1061,30 @@ h1, h2, h3, h4, .logo {
     }
     .phone-teaser-img {
         height: 120px;
+    }
+    .service-hero-title {
+        font-size: 2.5rem !important;
+    }
+    .service-hero {
+        padding: 160px 0 100px !important;
+    }
+    .service-cta h2, .cta h2, .phones-cta h2, .vapes-cta h2, .phones-intro .text-content p, .phones-intro-text {
+        font-style: normal !important;
+        text-align: center !important;
+    }
+    .info-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 15px !important;
+        margin-bottom: 35px !important;
+    }
+    .phones-intro {
+        padding: 20px !important;
+    }
+    .phones-intro img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
     }
 }
